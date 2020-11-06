@@ -1,0 +1,53 @@
+{
+  "name": "beer-sample-app-vuessr",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node ./server.js",
+    "build": "npm-run-all --parallel build:*",
+    "build:server-bundle": "rimraf dist && webpack --config webpack.server.config.js --hide-modules --progress",
+    "build:client-bundle": "rimraf public && webpack --config webpack.client.config.js --hide-modules --progress",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "dependencies": {
+    "core-js": "~3.6.5",
+    "dotenv": "~8.2.0",
+    "express": "~4.17.1",
+    "node-fetch": "^2.6.1",
+    "regenerator-runtime": "~0.13.7",
+    "serialize-javascript": "~4.0.0",
+    "vue": "~2.6.12",
+    "vue-router": "~3.4.7",
+    "vue-server-renderer": "~2.6.12",
+    "vuex": "~3.5.1",
+    "vuex-router-sync": "~5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "~7.12.1",
+    "@babel/core": "~7.12.3",
+    "@babel/preset-env": "~7.12.1",
+    "babel-loader": "~8.1.0",
+    "copy-webpack-plugin": "~6.2.1",
+    "cross-env": "~7.0.2",
+    "css-loader": "~1.0.1",
+    "eslint": "~7.11.0",
+    "eslint-config-airbnb-base": "~14.2.0",
+    "eslint-plugin-import": "~2.22.1",
+    "eslint-plugin-vue": "~6.2.2",
+    "file-loader": "~6.0.0",
+    "nodemon": "~2.0.6",
+    "npm-run-all": "~4.1.5",
+    "vue-loader": "~14.2.4",
+    "vue-template-compiler": "~2.6.12",
+    "webpack": "~4.44.2",
+    "webpack-cli": "~3.3.12",
+    "webpack-dev-server": "~3.11.0",
+    "webpack-merge": "~4.2.2",
+    "webpack-node-externals": "~2.5.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8",
+    "ie 11"
+  ]
+}
