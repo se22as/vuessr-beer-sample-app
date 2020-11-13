@@ -29,15 +29,7 @@ const config = {
       // handle loading of css files
       {
         test: /\.css$/,
-        use: [
-          { loader: 'vue-style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true
-            }
-          },
-        ],
+        use: ['vue-style-loader','css-loader'],
       },
     ],
   },
