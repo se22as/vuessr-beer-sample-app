@@ -48,7 +48,8 @@ server.get('*', (req, res) => {
   });
 });
 
-const port = process.env.EXPRESS_SERVER_PORT ? process.env.EXPRESS_SERVER_PORT : 8080;
+//const port = process.env.EXPRESS_SERVER_PORT ? process.env.EXPRESS_SERVER_PORT : 8080;
+const port = process.env.PORT || 3000
 server.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
