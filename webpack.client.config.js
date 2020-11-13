@@ -30,8 +30,13 @@ const config = {
       {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
-          'css-loader',
+          { loader: 'vue-style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          },
         ],
       },
     ],
